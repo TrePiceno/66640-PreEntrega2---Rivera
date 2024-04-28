@@ -1,0 +1,71 @@
+// Imports
+// Variables
+@import "../utils/variables";
+
+// Listas
+@import "../utils/listas";
+
+// Mapas
+@import "../utils/mapas";
+
+
+/* BLOG */
+
+.contenedor_uno_blog {
+    display: flex;
+    flex-direction: column;
+    padding: nth($medidas_pixeles , 1 );
+    gap: nth($medidas_pixeles , 2 );
+
+    .card_blog {
+        border: 3px solid black;   
+        border-radius: nth($medidas_pixeles , 1 );
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: nth($medidas_pixeles , 2 );
+        padding: nth($medidas_pixeles , 2 );
+        width: map-get($medidas_dos, viewport_width );
+        
+
+        .card_texto {
+
+            .boton_blog {
+                font-size: small;
+                background-color: $color_boton_blog;
+                border: 2px solid #daa19a;
+                padding: nth($medidas_pixeles , 1 );
+            }
+        }
+    }
+}
+
+aside {
+    display: grid;
+    grid-template-areas: 
+    "buscar"
+    "publicaciones "
+    "categorias"
+    "archivo";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 150px 150px 150px;
+    justify-items: center;
+    margin: 40px 0;
+
+    .buscar {
+        grid-area: buscar;
+    }
+
+    .publicaciones {
+        grid-area: publicaciones;
+    }
+    
+    .categorias {
+        grid-area: categorias;
+    }
+    
+    .archivo {
+        grid-area: archivo;
+    }
+}

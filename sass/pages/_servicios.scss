@@ -1,0 +1,102 @@
+// Imports
+// Variables
+@import "../utils/variables";
+
+// Listas
+@import "../utils/listas";
+
+// Mapas
+@import "../utils/mapas";
+
+/* SERVICIOS */
+
+#contenedor_tres {
+    display: grid;
+    grid-template-areas:
+    "img_uno"
+    "img_dos"
+    "img_tres"
+    "img_cuatro"
+    "img_cinco";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 500px 500px 500px 800px;
+    gap: 150px;
+
+    .img_serv {
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: map-get($medidas_dos, viewport_width );
+        height: map-get($medidas_dos, viewport_height );
+        margin: auto;
+
+        button {
+            border-color: white;
+            padding: nth($medidas_pixeles , 1 );
+            font-size: large;
+            font-weight: bold;
+            background-color: $color_principal;
+            color: white;
+            border-radius: nth($medidas_pixeles , 1 );
+        }
+        
+        button:hover {
+            background-color: $color_hover;
+        }
+    }
+
+    .img_serv_uno{
+        background-image: url(../img/diabetes.jpg);
+        grid-area: img_uno;
+    }
+
+    .img_serv_dos {
+        background-image: url(../img/control_peso.jpg);
+        grid-area: img_dos;
+    }
+    
+    .img_serv_tres {
+        background-image: url(../img/actividad_física.jpg);
+        grid-area: img_tres;
+    }
+    
+    .img_serv_cuatro {
+        background-image: url(../img/lactancia.jpg);
+        grid-area: img_cuatro;
+    }
+    
+    .img_serv_cinco {
+        grid-area: img_cinco;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: nth($medidas_pixeles , 3 );
+        width: 70%;
+        margin: 0 auto;
+
+        .boton_tres {
+
+            button {
+                border-color: white;
+                padding: nth($medidas_pixeles , 1 );
+                font-size: large;
+                font-weight: bold;
+                background-color: $color_principal;
+                color: white;
+                border-radius: nth($medidas_pixeles , 1 );
+            }
+            
+            button:hover {
+                background-color: $color_hover;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,47 @@
+// Imports
+// Variables
+@import "../utils/variables";
+
+// Listas
+@import "../utils/listas";
+
+// Mapas
+@import "../utils/mapas";
+
+
+/* SOBRE MI */
+
+.contenedor_sobre_mi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+        width: map-get($medidas_dos, viewport_width );
+    }
+
+}
+
+.boton_dos {
+    height: 15vh;
+    align-content: center;
+
+    button {
+    border-color: white;
+    padding: nth($medidas_pixeles , 1 );
+    font-size: large;
+    font-weight: bold;
+    background-color: $color_principal;
+    color: white;
+    border-radius: nth($medidas_pixeles , 1 );
+    display: block;
+    margin: 0 auto;
+    }
+
+    button:hover {
+        background-color: $color_hover;
+    }
+}
+
+
+
